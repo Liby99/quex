@@ -1,0 +1,37 @@
+/* -*- C++ -*-  vim: set syntax=cpp:
+ * (C) 2021 Ziyang Li  */
+#ifndef  QUEX_INCLUDE_GUARD__QUEX__CONVERTER__UTF8PROC__CONVERTER_UTF8PROC
+#define  QUEX_INCLUDE_GUARD__QUEX__CONVERTER__UTF8PROC__CONVERTER_UTF8PROC
+
+$$INC: quex/converter/Converter$$
+$$INC: quex/converter/utf8proc/special_headers.h$$
+
+
+QUEX_NAMESPACE_QUEX_OPEN
+
+QUEX_CLASS_BEGIN(Converter_Utf8Proc,Converter)
+
+$$<Cpp>------------------------------------------------------------------------
+    QUEX_NAME_LIB(Converter_Utf8Proc)(size_t LexatomSize_bit, const char* FromEncoding, const char* ToEncoding);
+    QUEX_NAME_LIB(Converter_Utf8Proc)(size_t LexatomSize_bit, E_ByteOrderMark);
+$$-----------------------------------------------------------------------------
+
+QUEX_CLASS_END(Converter_Utf8Proc)
+
+extern QUEX_GNAME_LIB(Converter)*
+QUEX_NAME_LIB(Converter_Utf8Proc_new)(size_t      LexatomSize_bit,
+                                   const char* FromEncoding,
+                                   const char* ToEncoding);
+extern bool
+QUEX_NAME_LIB(Converter_Utf8Proc_construct)(QUEX_GNAME_LIB(Converter_Utf8Proc)* me,
+                                         size_t                           LexatomSize_bit,
+                                         const char*                      FromEncoding,
+                                         const char*                      ToEncoding);
+extern bool
+QUEX_NAME_LIB(Converter_Utf8Proc_construct_from_BOM)(QUEX_GNAME_LIB(Converter_Utf8Proc)* me,
+                                                  size_t                           LexatomSize_bit,
+                                                  E_ByteOrderMark                  BomId);
+
+QUEX_NAMESPACE_QUEX_CLOSE
+
+#endif /*  QUEX_INCLUDE_GUARD__QUEX__CONVERTER__UTF8PROC__CONVERTER_UTF8PROC */
